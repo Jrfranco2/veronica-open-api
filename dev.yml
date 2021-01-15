@@ -1,8 +1,10 @@
 version: '3.8'
 services:
   veronica-open-api:
-    build: ./veronica-open-api
+    build: .
     container_name: servicio-veronica-api
+    ports: 
+      - "8080:8080" 
     restart: always
     environment:
       - SPRING_PROFILES_ACTIVE=development
