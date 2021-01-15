@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  veronica-open-api:
+    build: ./veronica-open-api
+    container_name: servicio-veronica-api
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=development
+    networks:
+      - api
+networks:
+  api:
+    external: true
